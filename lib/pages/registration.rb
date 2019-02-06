@@ -6,13 +6,69 @@ class Registration
   # page objects
   REGISTRATION_PAGE_URL = 'http://localhost:9292'
   FIRST_NAME_FIELD_ID = 'firstName'
+  LAST_NAME_FIELD_ID = 'lastName'
+  AGE_FIELD_XPATH = '/html/body/div/form/div[3]/div/input'
+  DATE_FIELD_ID = 'dob'
+  GENDER_BUTTON_XPATH = '/html/body/div/form/div[6]'
+  DEGREE_FIELD_XPATH = '/html/body/div/form/div[7]/div/input'
+  UNIVERSITY_FIELD_ID = 'inputUni'
+  ADDRESS_FIELD_ID = 'inputAddress'
+  ADDRESS_TWO_FIELD_ID = 'inputAddress2'
+  CITY_FIELD_ID = 'inputCity'
+  COUNTY_FIELD_ID = 'inputCounty'
+  POSTCODE_FIELD_ID = 'inputPostcode'
+  EMAILADD_FIELD_ID = ''
 
+  # page methods
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
   end
 
-  def fill_in_name(name)
+  def fill_in_firstname(name)
     fill_in(FIRST_NAME_FIELD_ID, :with => name)
   end
+
+  def fill_in_lastname(name)
+    fill_in(LAST_NAME_FIELD_ID, :with => name)
+  end
+
+  def fill_in_age(age)
+    find(:xpath, AGE_FIELD_XPATH).set(age)
+  end
+
+  def fill_in_dob(date)
+    fill_in(DATE_FIELD_ID, :with => date)
+  end
+
+  def fill_in_gender
+    find(:xpath, GENDER_BUTTON_XPATH).click
+  end
   
+  def fill_in_degree(degree)
+    find(:xpath, DEGREE_FIELD_XPATH).set(degree)
+  end
+
+  def fill_in_university(uni)
+    select(uni, :from => UNIVERSITY_FIELD_ID)
+  end
+
+  def fill_in_address(address)
+    fill_in(ADDRESS_FIELD_ID, :with => address)
+  end
+
+  def fill_in_address_two(address)
+    fill_in(ADDRESS_TWO_FIELD_ID, :with => address)
+  end
+
+  def fill_in_city(city)
+    fill_in(CITY_FIELD_ID, :with => city)
+  end
+
+  def fill_in_county(county)
+    select(county, :from => COUNTY_FIELD_ID)
+  end
+
+  def fill_in_postcode(pcode)
+    fill_in(POSTCODE_FIELD_ID, :with => pcode)
+  end
 end
