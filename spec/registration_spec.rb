@@ -19,6 +19,7 @@ describe 'testing a correct path for sparta registration' do
       @sparta_demo_site.fill_in_county('South Yorkshire')
       @sparta_demo_site.fill_in_postcode('LN6 5GZ')
       @sparta_demo_site.fill_in_emailadd('JSmith@example.com')
+      @sparta_demo_site.fill_in_skills('Lorem Ipsum.')
       sleep 5
     end
   

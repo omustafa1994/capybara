@@ -18,6 +18,7 @@ class Registration
   COUNTY_FIELD_ID = 'inputCounty'
   POSTCODE_FIELD_ID = 'inputPostcode'
   EMAILADD_FIELD_ID = 'inputemailaddress'
+  SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
 
   # page methods
   def visit_registration_page
@@ -74,5 +75,9 @@ class Registration
 
   def fill_in_emailadd(email)
     fill_in(EMAILADD_FIELD_ID, :with => email)
+  end
+
+  def fill_in_skills(text)
+    fill_in(SKILLS_FIELD_ID, :with => text)
   end
 end
