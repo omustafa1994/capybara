@@ -19,6 +19,7 @@ class Registration
   POSTCODE_FIELD_ID = 'inputPostcode'
   EMAILADD_FIELD_ID = 'inputemailaddress'
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
+  PHONENUM_FIELD_ID = 'exampleFormControlInput1'
 
   # page methods
   def visit_registration_page
@@ -80,4 +81,12 @@ class Registration
   def fill_in_skills(text)
     fill_in(SKILLS_FIELD_ID, :with => text)
   end
+
+  def fill_in_phonenumber(phone)
+    fill_in(PHONENUM_FIELD_ID, :with => phone)
+  end
+
+  # def fill_in_skills(text)
+  #   fill_in(SKILLS_FIELD_ID, :with => text)
+  # end
 end
