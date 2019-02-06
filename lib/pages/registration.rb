@@ -17,7 +17,7 @@ class Registration
   CITY_FIELD_ID = 'inputCity'
   COUNTY_FIELD_ID = 'inputCounty'
   POSTCODE_FIELD_ID = 'inputPostcode'
-  EMAILADD_FIELD_ID = ''
+  EMAILADD_FIELD_ID = 'inputemailaddress'
 
   # page methods
   def visit_registration_page
@@ -70,5 +70,9 @@ class Registration
 
   def fill_in_postcode(pcode)
     fill_in(POSTCODE_FIELD_ID, :with => pcode)
+  end
+
+  def fill_in_emailadd(email)
+    fill_in(EMAILADD_FIELD_ID, :with => email)
   end
 end
