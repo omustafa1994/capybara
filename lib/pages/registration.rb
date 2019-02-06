@@ -23,6 +23,10 @@ class Registration
   LINKEDLN_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
   CHOOSEFILE_FIELD_XPATH = '/html/body/div/form/div[18]/div/input'
   STREAM_FIELD_XPATH = '/html/body/div/form/div[20]/div[1]'
+  TERMS_FIELD_ID = '//*[@id="terms"]'
+  SLIDER_BUTTON_ID = '//*[@id="experienceSlider"]'
+  TEST1 = '//*[@id="experienceSlider"]'
+  TEST2 = '//*[@id="value_for_slider"]'
 
   # page methods
   def visit_registration_page
@@ -100,4 +104,9 @@ class Registration
   def fill_in_stream
     find(:xpath, STREAM_FIELD_XPATH).click
   end
+
+  def fill_in_terms
+    find(:xpath, TERMS_FIELD_ID).click
+  end
+
 end
