@@ -22,6 +22,7 @@ class Registration
   PHONENUM_FIELD_ID = 'exampleFormControlInput1'
   LINKEDLN_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
   CHOOSEFILE_FIELD_XPATH = '/html/body/div/form/div[18]/div/input'
+  STREAM_FIELD_XPATH = '/html/body/div/form/div[20]/div[1]'
 
   # page methods
   def visit_registration_page
@@ -93,6 +94,10 @@ class Registration
   end
 
   def fill_in_choosefile
-    find(:xpath, CHOOSEFILE_FIELD_ID).click
+    find(:xpath, CHOOSEFILE_FIELD_XPATH).click
+  end
+
+  def fill_in_stream
+    find(:xpath, STREAM_FIELD_XPATH).click
   end
 end
