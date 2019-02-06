@@ -20,6 +20,7 @@ class Registration
   EMAILADD_FIELD_ID = 'inputemailaddress'
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
   PHONENUM_FIELD_ID = 'exampleFormControlInput1'
+  LINKEDLN_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
 
   # page methods
   def visit_registration_page
@@ -86,7 +87,7 @@ class Registration
     fill_in(PHONENUM_FIELD_ID, :with => phone)
   end
 
-  # def fill_in_skills(text)
-  #   fill_in(SKILLS_FIELD_ID, :with => text)
-  # end
+  def fill_in_linkedln(linkedln)
+    find(:xpath, LINKEDLN_FIELD_XPATH).set(linkedln)
+  end
 end
