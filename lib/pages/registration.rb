@@ -21,6 +21,7 @@ class Registration
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
   PHONENUM_FIELD_ID = 'exampleFormControlInput1'
   LINKEDLN_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
+  CHOOSEFILE_FIELD_XPATH = '/html/body/div/form/div[18]/div/input'
 
   # page methods
   def visit_registration_page
@@ -89,5 +90,9 @@ class Registration
 
   def fill_in_linkedln(linkedln)
     find(:xpath, LINKEDLN_FIELD_XPATH).set(linkedln)
+  end
+
+  def fill_in_choosefile
+    find(:xpath, CHOOSEFILE_FIELD_ID).click
   end
 end

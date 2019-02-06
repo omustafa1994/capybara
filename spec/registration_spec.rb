@@ -22,6 +22,7 @@ describe 'testing a correct path for sparta registration' do
       @sparta_demo_site.fill_in_skills('Lorem Ipsum.')
       @sparta_demo_site.fill_in_phonenumber('+44 7879 123123')
       @sparta_demo_site.fill_in_linkedln('www.linkedln.com')
+      @sparta_demo_site.fill_in_choosefile
       sleep 5
     end
   
